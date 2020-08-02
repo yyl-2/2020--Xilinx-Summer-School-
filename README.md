@@ -13,6 +13,9 @@
   【Arduino 1.8.13】（https://www.arduino.cc/en/Main/Software）
 
 ### 板卡型号 
+* Espressif ESP32-D0WDQ6
+
+### 芯片型号
 * xc7s15ftgb196-1
     
 ### 设计步骤 
@@ -26,5 +29,8 @@
 
 * Esp32连接**AWS IoT**，使用MQTT订阅主题观察数据情况，将板载陀螺仪数据上传至IoT云端。
 * 利用IoT云端 Web API，从AWS平台获取数据并处理，用于呈现直观的计步器小程序。
+### 项目框图
+
+
 
     
