@@ -1,0 +1,104 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Mon Jul 20 09:54:00 2020
+| Host         : LAPTOP-7AIFQ6TN running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Gyro_Demo_Verilog_control_sets_placed.rpt
+| Design       : Gyro_Demo_Verilog
+| Device       : xc7s15
+----------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    33 |
+| Unused register locations in slices containing registers |    74 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      2 |            3 |
+|      4 |            2 |
+|      6 |            1 |
+|      8 |            1 |
+|     10 |            1 |
+|     12 |            1 |
+|     14 |            1 |
+|    16+ |           23 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              16 |            3 |
+| No           | No                    | Yes                    |             706 |           95 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |              62 |            8 |
+| Yes          | No                    | Yes                    |             418 |           49 |
+| Yes          | Yes                   | No                     |             124 |           18 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------------------------+----------------------------------------+------------------------------------------------------------+------------------+----------------+
+|          Clock Signal          |              Enable Signal             |                      Set/Reset Signal                      | Slice Load Count | Bel Load Count |
++--------------------------------+----------------------------------------+------------------------------------------------------------+------------------+----------------+
+| ~System_Clock/inst/clk_out1    |                                        | UART0_Ctrl/UART_Package0/num_i_reg[0]_0                    |                1 |              2 |
+|  System_Clock/inst/clk_out1    | Gyro_0/anglez_data_o[7]_i_1_n_0        | Gyro_0/Gyro_Read_Data_0/Trigger_Write/reg_en_rise_reg[0]_0 |                1 |              2 |
+|  System_Clock/inst/clk_out1    | IIC_0/iic_sda_o_i_1_n_0                | Gyro_0/Gyro_Read_Data_0/Trigger_Write/reg_en_rise_reg[0]_0 |                1 |              2 |
+|  System_Clock/inst/clk_out1    |                                        | UART0_Ctrl/UART0/UART_Rx0/rx_i_reg_0                       |                2 |              4 |
+|  System_Clock/inst/clk_out1    | UART0_Ctrl/data_5                      | UART0_Ctrl/UART_Package0/num_i_reg[0]_0                    |                1 |              4 |
+|  System_Clock/inst/clk_out1    | Gyro_0/magx_data_o[7]_i_1_n_0          | UART0_Ctrl/UART_Package0/tx_wr_data_reg[35]_0              |                2 |              6 |
+|  System_Clock/inst/clk_out1    | Gyro_0/Gyro_Init_0/init_cnt[3]_i_1_n_0 | Gyro_0/Gyro_Read_Data_0/Trigger_Write/reg_en_rise_reg[0]_0 |                1 |              8 |
+|  System_Clock/inst/clk_out1    | Gyro_0/magx_data_o[7]_i_1_n_0          | Gyro_0/Gyro_Init_0/data_w_o_reg[0]_0                       |                2 |             10 |
+|  System_Clock/inst/clk_out1    | Gyro_0/Gyro_Read_Data_0/reg_addr_l_o_0 | UART0_Ctrl/UART_Package0/num_i_reg[0]_0                    |                3 |             12 |
+|  System_Clock/inst/clk_out1    | Gyro_0/anglez_data_o[7]_i_1_n_0        | Gyro_0/Gyro_Init_0/data_w_o_reg[0]_0                       |                1 |             14 |
+|  System_Clock/inst/clk_out1    |                                        |                                                            |                3 |             16 |
+|  System_Clock/inst/clk_out1    | Gyro_0/magx_data_o[15]_i_1_n_0         | Gyro_0/Gyro_Init_0/data_w_o_reg[0]_0                       |                2 |             16 |
+|  System_Clock/inst/clk_out1    | Gyro_0/anglex_data_o[7]_i_1_n_0        | Gyro_0/Gyro_Init_0/data_w_o_reg[0]_0                       |                2 |             16 |
+|  System_Clock/inst/clk_out1    | Gyro_0/anglez_data_o[15]_i_1_n_0       | Gyro_0/Gyro_Init_0/data_w_o_reg[0]_0                       |                1 |             16 |
+|  System_Clock/inst/clk_out1    | Gyro_0/angley_data_o[7]_i_1_n_0        | Gyro_0/Gyro_Init_0/data_w_o_reg[0]_0                       |                1 |             16 |
+|  System_Clock/inst/clk_out1    | Gyro_0/angley_data_o[15]_i_1_n_0       | Gyro_0/Gyro_Init_0/data_w_o_reg[0]_0                       |                1 |             16 |
+|  System_Clock/inst/clk_out1    | Gyro_0/anglex_data_o[15]_i_1_n_0       | Gyro_0/Gyro_Init_0/data_w_o_reg[0]_0                       |                1 |             16 |
+|  System_Clock/inst/clk_out1    | Gyro_0/Gyro_Read_Data_0/read_data_o    | Gyro_0/Gyro_Read_Data_0/Trigger_Write/reg_en_rise_reg[0]_0 |                1 |             16 |
+|  System_Clock/inst/clk_out1    | Gyro_0/temperature_data_o[15]_i_1_n_0  | Gyro_0/Gyro_Init_0/data_w_o_reg[0]_0                       |                1 |             16 |
+|  System_Clock/inst/clk_out1    | Gyro_0/temperature_data_o1             | Gyro_0/Gyro_Init_0/data_w_o_reg[0]_0                       |                2 |             16 |
+|  System_Clock/inst/clk_out1    | Gyro_0/Gyro_Init_0/reg_addr_l_o0       | Gyro_0/Gyro_Init_0/data_w_o_reg[0]_0                       |                2 |             22 |
+|  System_Clock/inst/clk_out1    | UART0_Ctrl/UART_Package0/tx_wr_data_0  | UART0_Ctrl/UART_Package0/tx_wr_data_reg[36]_0              |                4 |             30 |
+|  UART0_Ctrl/UART0/UART_CLK/CLK |                                        | Gyro_0/Gyro_Read_Data_0/Trigger_Write/reg_en_rise_reg[0]_0 |                5 |             46 |
+|  System_Clock/inst/clk_out1    |                                        | Gyro_0/Gyro_Init_0/data_w_o_reg[0]_0                       |               11 |             50 |
+|  System_Clock/inst/clk_out1    | i_rst_IBUF                             |                                                            |                8 |             62 |
+|  System_Clock/inst/clk_out1    | i_rst_IBUF                             | UART0_Ctrl/UART0/UART_CLK/cnt[30]_i_1_n_0                  |                9 |             62 |
+|  System_Clock/inst/clk_out1    | i_rst_IBUF                             | Gyro_0/Gyro_Read_Data_0/read_clock/cnt[30]_i_1__0_n_0      |                9 |             62 |
+|  System_Clock/inst/clk_out1    | UART0_Ctrl/UART_Package0/tx_wr_data_0  | UART0_Ctrl/UART_Package0/tx_wr_data_reg[35]_0              |               11 |             72 |
+|  System_Clock/inst/clk_out1    | UART0_Ctrl/data_5                      | UART0_Ctrl/UART_Package0/tx_wr_data_reg[36]_0              |                8 |             92 |
+|  System_Clock/inst/clk_out1    |                                        | UART0_Ctrl/UART_Package0/tx_wr_data_reg[36]_0              |               13 |            102 |
+|  System_Clock/inst/clk_out1    |                                        | UART0_Ctrl/UART_Package0/tx_wr_data_reg[35]_0              |               17 |            146 |
+|  System_Clock/inst/clk_out1    |                                        | Gyro_0/Gyro_Read_Data_0/Trigger_Write/reg_en_rise_reg[0]_0 |               20 |            150 |
+|  System_Clock/inst/clk_out1    |                                        | UART0_Ctrl/UART_Package0/num_i_reg[0]_0                    |               26 |            206 |
++--------------------------------+----------------------------------------+------------------------------------------------------------+------------------+----------------+
+
+

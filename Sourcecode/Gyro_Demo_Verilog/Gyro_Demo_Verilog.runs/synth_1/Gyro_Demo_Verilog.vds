@@ -1,0 +1,919 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Mon Jul 20 09:52:55 2020
+# Process ID: 2280
+# Current directory: C:/Users/ThinkPad/Desktop/FPGA_Demo_Project/Gyro_Demo/Gyro_Demo_Verilog/Gyro_Demo_Verilog.runs/synth_1
+# Command line: vivado.exe -log Gyro_Demo_Verilog.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Gyro_Demo_Verilog.tcl
+# Log file: C:/Users/ThinkPad/Desktop/FPGA_Demo_Project/Gyro_Demo/Gyro_Demo_Verilog/Gyro_Demo_Verilog.runs/synth_1/Gyro_Demo_Verilog.vds
+# Journal file: C:/Users/ThinkPad/Desktop/FPGA_Demo_Project/Gyro_Demo/Gyro_Demo_Verilog/Gyro_Demo_Verilog.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source Gyro_Demo_Verilog.tcl -notrace
+Command: synth_design -top Gyro_Demo_Verilog -part xc7s15ftgb196-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s15'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s15'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 13016 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 445.098 ; gain = 100.922
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Gyro_Demo_Verilog' [C:/Users/ThinkPad/Desktop/FPGA_Demo_Project/Gyro_Demo/Gyro_Demo_Verilog/Gyro_Demo_Verilog.srcs/sources_1/new/Gyro_Demo_Verilog.v:23]
+INFO: [Synth 8-6157] synthesizing module 'IOBUF' [D:/Software-Code/Vivado2018.2/Vivado/2018.2/scripts/rt/data/unisim_comp.v:22660]
+	Parameter DRIVE bound to: 12 - type: integer 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (1#1) [D:/Software-Code/Vivado2018.2/Vivado/2018.2/scripts/rt/data/unisim_comp.v:22660]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/ThinkPad/Desktop/FPGA_Demo_Project/Gyro_Demo/Gyro_Demo_Verilog/Gyro_Demo_Verilog.runs/synth_1/.Xil/Vivado-2280-LAPTOP-7AIFQ6TN/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (2#1) [C:/Users/ThinkPad/Desktop/FPGA_Demo_Project/Gyro_Demo/Gyro_Demo_Verilog/Gyro_Demo_Verilog.runs/synth_1/.Xil/Vivado-2280-LAPTOP-7AIFQ6TN/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'Driver_Gyro' [C:/Users/ThinkPad/Desktop/FPGA_Demo_Project/Gyro_Demo/Gyro_Demo_Verilog/Gyro_Demo_Verilog.srcs/sources_1/new/Driver_Gyro.v:23]
+	Parameter DEFAULT_SLAVE_ADDRESS bound to: 8'b11010110 
+	Parameter ST_IDLE bound to: 3'b000 
+	Parameter ST_INIT bound to: 3'b001 
+	Parameter ST_WAIT bound to: 3'b010 
+	Parameter ST_TEMP bound to: 3'b011 
+	Parameter ST_ANGLE bound to: 3'b100 
+	Parameter ST_MAG bound to: 3'b101 
+INFO: [Synth 8-6157] synthesizing module 'Gyro_Read_Data' [C:/Users/ThinkPad/Desktop/FPGA_Demo_Project/Gyro_Demo/Gyro_Demo_Verilog/Gyro_Demo_Verilog.srcs/sources_1/new/Driver_Gyro.v:341]
+	Parameter WR_HOLD_T bound to: 4'b1010 
+	Parameter WR_VALID bound to: 1'b1 
+	Parameter ST_IDLE bound to: 2'b00 
+	Parameter ST_START bound to: 2'b01 
+	Parameter ST_READ bound to: 2'b10 
+	Parameter ST_END bound to: 2'b11 
+INFO: [Synth 8-6157] synthesizing module 'clk_division' [C:/Users/ThinkPad/Desktop/FPGA_Demo_Project/Gyro_Demo/Gyro_Demo_Verilog/Gyro_Demo_Verilog.srcs/sources_1/new/clk_division.v:23]
+WARNING: [Synth 8-5788] Register cnt_reg in module clk_division is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/ThinkPad/Desktop/FPGA_Demo_Project/Gyro_Demo/Gyro_Demo_Verilog/Gyro_Demo_Verilog.srcs/sources_1/new/clk_division.v:65]
+INFO: [Synth 8-6155] done synthesizing module 'clk_division' (3#1) [C:/Users/ThinkPad/Desktop/FPGA_Demo_Project/Gyro_Demo/Gyro_Demo_Verilog/Gyro_Demo_Verilog.srcs/sources_1/new/clk_division.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Trigger_Generator' [C:/Users/ThinkPad/Desktop/FPGA_Demo_Project/Gyro_Demo/Gyro_Demo_Verilog/Gyro_Demo_Verilog.srcs/sources_1/new/Trigger_Generator.v:23]
+	Parameter ST_WAIT bound to: 2'b00 
+	Parameter ST_START bound to: 2'b01 
+	Parameter ST_HOLD bound to: 2'b10 
+	Parameter ST_END bound to: 2'b11 
+INFO: [Synth 8-6155] done synthesizing module 'Trigger_Generator' (4#1) [C:/Users/ThinkPad/Desktop/FPGA_Demo_Project/Gyro_Demo/Gyro_Demo_Verilog/Gyro_Demo_Verilog.srcs/sources_1/new/Trigger_Generator.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Gyro_Read_Data' (5#1) [C:/Users/ThinkPad/Desktop/FPGA_Demo_Project/Gyro_Demo/Gyro_Demo_Verilog/Gyro_Demo_Verilog.srcs/sources_1/new/Driver_Gyro.v:341]
+INFO: [Synth 8-6157] synthesizing module 'Gyro_Init' [C:/Users/ThinkPad/Desktop/FPGA_Demo_Project/Gyro_Demo/Gyro_Demo_Verilog/Gyro_Demo_Verilog.srcs/sources_1/new/Driver_Gyro.v:498]
+	Parameter WR_HOLD_T bound to: 4'b1010 
+	Parameter WR_VALID bound to: 1'b1 
+INFO: [Synth 8-6155] done synthesizing module 'Gyro_Init' (6#1) [C:/Users/ThinkPad/Desktop/FPGA_Demo_Project/Gyro_Demo/Gyro_Demo_Verilog/Gyro_Demo_Verilog.srcs/sources_1/new/Driver_Gyro.v:498]
+INFO: [Synth 8-6155] done synthesizing module 'Driver_Gyro' (7#1) [C:/Users/ThinkPad/Desktop/FPGA_Demo_Project/Gyro_Demo/Gyro_Demo_Verilog/Gyro_Demo_Verilog.srcs/sources_1/new/Driver_Gyro.v:23]
+INFO: [Synth 8-6157] synthesizing module 'UART_Ctrl' [C:/Users/ThinkPad/Desktop/FPGA_Demo_Project/Gyro_Demo/Gyro_Demo_Verilog/Gyro_Demo_Verilog.srcs/sources_1/new/UART_Ctrl.v:23]
+	Parameter ST_IDLE bound to: 2'b00 
+	Parameter ST_START bound to: 2'b01 
+	Parameter ST_END bound to: 2'b10 
+INFO: [Synth 8-6157] synthesizing module 'Driver_UART' [C:/Users/ThinkPad/Desktop/FPGA_Demo_Project/Gyro_Demo/Gyro_Demo_Verilog/Gyro_Demo_Verilog.srcs/sources_1/new/Driver_UART.v:24]
+	Parameter Default_BaudRate bound to: 9600 - type: integer 
+	Parameter CLK_Freq_MHZ bound to: 100 - type: integer 
+	Parameter Default_Factor bound to: 10417 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'UART_Rx' [C:/Users/ThinkPad/Desktop/FPGA_Demo_Project/Gyro_Demo/Gyro_Demo_Verilog/Gyro_Demo_Verilog.srcs/sources_1/new/Driver_UART.v:109]
+	Parameter ST_IDLE bound to: 2'b00 
+	Parameter ST_START bound to: 2'b01 
+	Parameter ST_END bound to: 2'b10 
+WARNING: [Synth 8-6014] Unused sequential element en_i_reg was removed.  [C:/Users/ThinkPad/Desktop/FPGA_Demo_Project/Gyro_Demo/Gyro_Demo_Verilog/Gyro_Demo_Verilog.srcs/sources_1/new/Driver_UART.v:204]
+INFO: [Synth 8-6155] done synthesizing module 'UART_Rx' (8#1) [C:/Users/ThinkPad/Desktop/FPGA_Demo_Project/Gyro_Demo/Gyro_Demo_Verilog/Gyro_Demo_Verilog.srcs/sources_1/new/Driver_UART.v:109]
+INFO: [Synth 8-6157] synthesizing module 'UART_Tx' [C:/Users/ThinkPad/Desktop/FPGA_Demo_Project/Gyro_Demo/Gyro_Demo_Verilog/Gyro_Demo_Verilog.srcs/sources_1/new/Driver_UART.v:214]
+	Parameter ST_IDLE bound to: 2'b00 
+	Parameter ST_START bound to: 2'b01 
+	Parameter ST_SEND bound to: 2'b10 
+	Parameter ST_END bound to: 2'b11 
+INFO: [Synth 8-6155] done synthesizing module 'UART_Tx' (9#1) [C:/Users/ThinkPad/Desktop/FPGA_Demo_Project/Gyro_Demo/Gyro_Demo_Verilog/Gyro_Demo_Verilog.srcs/sources_1/new/Driver_UART.v:214]
+INFO: [Synth 8-6155] done synthesizing module 'Driver_UART' (10#1) [C:/Users/ThinkPad/Desktop/FPGA_Demo_Project/Gyro_Demo/Gyro_Demo_Verilog/Gyro_Demo_Verilog.srcs/sources_1/new/Driver_UART.v:24]
+INFO: [Synth 8-6157] synthesizing module 'UART_Package' [C:/Users/ThinkPad/Desktop/FPGA_Demo_Project/Gyro_Demo/Gyro_Demo_Verilog/Gyro_Demo_Verilog.srcs/sources_1/new/UART_Ctrl.v:230]
+	Parameter ST_IDLE bound to: 3'b000 
+	Parameter ST_HEAD bound to: 3'b001 
+	Parameter ST_NUM bound to: 3'b010 
+	Parameter ST_START bound to: 3'b011 
+	Parameter ST_END bound to: 3'b100 
+INFO: [Synth 8-6155] done synthesizing module 'UART_Package' (11#1) [C:/Users/ThinkPad/Desktop/FPGA_Demo_Project/Gyro_Demo/Gyro_Demo_Verilog/Gyro_Demo_Verilog.srcs/sources_1/new/UART_Ctrl.v:230]
+INFO: [Synth 8-6155] done synthesizing module 'UART_Ctrl' (12#1) [C:/Users/ThinkPad/Desktop/FPGA_Demo_Project/Gyro_Demo/Gyro_Demo_Verilog/Gyro_Demo_Verilog.srcs/sources_1/new/UART_Ctrl.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Driver_IIC' [C:/Users/ThinkPad/Desktop/FPGA_Demo_Project/Gyro_Demo/Gyro_Demo_Verilog/Gyro_Demo_Verilog.srcs/sources_1/new/Driver_IIC.v:22]
+	Parameter System_Clk_MHz bound to: 13'b0000001100100 
+	Parameter Set_IIC_SCL_kHz bound to: 13'b0000001100100 
+	Parameter SCL_Divider bound to: 13'b0000000000001 
+	Parameter SCL_SUM bound to: 13'b0001111101000 
+	Parameter SCL_H_START bound to: 0 - type: integer 
+	Parameter SCL_H_CENTER bound to: 249 - type: integer 
+	Parameter SCL_L_START bound to: 499 - type: integer 
+	Parameter SCL_L_CENTER bound to: 749 - type: integer 
+	Parameter ST_IDLE bound to: 5'b00000 
+	Parameter ST_START bound to: 5'b00001 
+	Parameter ST_W_SADDR bound to: 5'b00010 
+	Parameter ST_ACK_0 bound to: 5'b00011 
+	Parameter ST_W_ADDR_H bound to: 5'b00100 
+	Parameter ST_ACK_1 bound to: 5'b00101 
+	Parameter ST_W_ADDR_L bound to: 5'b00110 
+	Parameter ST_ACK_2 bound to: 5'b00111 
+	Parameter ST_W_DATA bound to: 5'b01000 
+	Parameter ST_ACK_3 bound to: 5'b01001 
+	Parameter ST_START_R bound to: 5'b01010 
+	Parameter ST_W_SADDR_R bound to: 5'b01011 
+	Parameter ST_ACK_4 bound to: 5'b01100 
+	Parameter ST_R_DATA bound to: 5'b01101 
+	Parameter ST_NACK bound to: 5'b01110 
+	Parameter ST_STOP bound to: 5'b01111 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/ThinkPad/Desktop/FPGA_Demo_Project/Gyro_Demo/Gyro_Demo_Verilog/Gyro_Demo_Verilog.srcs/sources_1/new/Driver_IIC.v:388]
+WARNING: [Synth 8-5788] Register data_r_o_reg in module Driver_IIC is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/ThinkPad/Desktop/FPGA_Demo_Project/Gyro_Demo/Gyro_Demo_Verilog/Gyro_Demo_Verilog.srcs/sources_1/new/Driver_IIC.v:112]
+INFO: [Synth 8-6155] done synthesizing module 'Driver_IIC' (13#1) [C:/Users/ThinkPad/Desktop/FPGA_Demo_Project/Gyro_Demo/Gyro_Demo_Verilog/Gyro_Demo_Verilog.srcs/sources_1/new/Driver_IIC.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'Gyro_Demo_Verilog' (14#1) [C:/Users/ThinkPad/Desktop/FPGA_Demo_Project/Gyro_Demo/Gyro_Demo_Verilog/Gyro_Demo_Verilog.srcs/sources_1/new/Gyro_Demo_Verilog.v:23]
+WARNING: [Synth 8-3917] design Gyro_Demo_Verilog has port o_gpio_en[1] driven by constant 1
+WARNING: [Synth 8-3917] design Gyro_Demo_Verilog has port o_gpio_en[0] driven by constant 1
+WARNING: [Synth 8-3917] design Gyro_Demo_Verilog has port o_src_en driven by constant 0
+WARNING: [Synth 8-3331] design UART_Rx has unconnected port i_en
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 499.371 ; gain = 155.195
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 499.371 ; gain = 155.195
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 499.371 ; gain = 155.195
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7s15ftgb196-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/ThinkPad/Desktop/FPGA_Demo_Project/Gyro_Demo/Gyro_Demo_Verilog/Gyro_Demo_Verilog.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'System_Clock'
+Finished Parsing XDC File [c:/Users/ThinkPad/Desktop/FPGA_Demo_Project/Gyro_Demo/Gyro_Demo_Verilog/Gyro_Demo_Verilog.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'System_Clock'
+Parsing XDC File [C:/Users/ThinkPad/Desktop/FPGA_Demo_Project/Gyro_Demo/Gyro_Demo_Verilog/Gyro_Demo_Verilog.srcs/constrs_1/new/system.xdc]
+Finished Parsing XDC File [C:/Users/ThinkPad/Desktop/FPGA_Demo_Project/Gyro_Demo/Gyro_Demo_Verilog/Gyro_Demo_Verilog.srcs/constrs_1/new/system.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/ThinkPad/Desktop/FPGA_Demo_Project/Gyro_Demo/Gyro_Demo_Verilog/Gyro_Demo_Verilog.srcs/constrs_1/new/system.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Gyro_Demo_Verilog_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Gyro_Demo_Verilog_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 1 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 811.070 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 811.070 ; gain = 466.895
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7s15ftgb196-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 811.070 ; gain = 466.895
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for i_clk. (constraint file  c:/Users/ThinkPad/Desktop/FPGA_Demo_Project/Gyro_Demo/Gyro_Demo_Verilog/Gyro_Demo_Verilog.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for i_clk. (constraint file  c:/Users/ThinkPad/Desktop/FPGA_Demo_Project/Gyro_Demo/Gyro_Demo_Verilog/Gyro_Demo_Verilog.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 4).
+Applied set_property DONT_TOUCH = true for System_Clock. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 811.070 ; gain = 466.895
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_current_reg' in module 'Trigger_Generator'
+INFO: [Synth 8-5544] ROM "flg_hold" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'state_current_reg' in module 'Gyro_Read_Data'
+INFO: [Synth 8-5544] ROM "state_current" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "flg_iic_ok" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "reg_addr_l_o" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "read_data_o" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "init_ack_o" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "flg_en" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "en_gyro_init" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "send_cnt" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'state_current_reg' in module 'UART_Rx'
+INFO: [Synth 8-5544] ROM "ack_o" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "data_o" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_next" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'state_current_reg' in module 'UART_Tx'
+INFO: [Synth 8-5544] ROM "ack_o" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_next" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'state_current_reg' in module 'UART_Package'
+INFO: [Synth 8-5544] ROM "tx_en_o" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "tx_wr_cnt" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_next" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_next" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_next" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_next" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'state_current_reg' in module 'UART_Ctrl'
+INFO: [Synth 8-5544] ROM "en_package" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "iic_scl_o" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "iic_write_req" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "iic_busy_o" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "sda_dir_o" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 ST_WAIT |                               00 |                               00
+                ST_START |                               01 |                               01
+                 ST_HOLD |                               10 |                               10
+                  ST_END |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_current_reg' using encoding 'sequential' in module 'Trigger_Generator'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 ST_IDLE |                               00 |                               00
+                ST_START |                               01 |                               01
+                 ST_READ |                               10 |                               10
+                  ST_END |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_current_reg' using encoding 'sequential' in module 'Gyro_Read_Data'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 ST_IDLE |                               00 |                               00
+                ST_START |                               01 |                               01
+                  ST_END |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_current_reg' using encoding 'sequential' in module 'UART_Rx'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 ST_IDLE |                               00 |                               00
+                ST_START |                               01 |                               01
+                 ST_SEND |                               10 |                               10
+                  ST_END |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_current_reg' using encoding 'sequential' in module 'UART_Tx'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 ST_IDLE |                            00001 |                              000
+                 ST_HEAD |                            00010 |                              001
+                  ST_NUM |                            00100 |                              010
+                ST_START |                            01000 |                              011
+                  ST_END |                            10000 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_current_reg' using encoding 'one-hot' in module 'UART_Package'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 ST_IDLE |                               00 |                               00
+                ST_START |                               01 |                               01
+                  ST_END |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_current_reg' using encoding 'sequential' in module 'UART_Ctrl'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 811.070 ; gain = 466.895
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 7     
+	   2 Input     31 Bit       Adders := 3     
+	   2 Input     28 Bit       Adders := 1     
+	   2 Input     14 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 2     
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 3     
+	   2 Input      3 Bit       Adders := 6     
+	   2 Input      2 Bit       Adders := 2     
++---Registers : 
+	               64 Bit    Registers := 2     
+	               31 Bit    Registers := 8     
+	               16 Bit    Registers := 14    
+	               14 Bit    Registers := 1     
+	                8 Bit    Registers := 32    
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
+	                3 Bit    Registers := 8     
+	                2 Bit    Registers := 15    
+	                1 Bit    Registers := 41    
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 1     
+	   5 Input     31 Bit        Muxes := 3     
+	   3 Input     16 Bit        Muxes := 1     
+	   7 Input     16 Bit        Muxes := 3     
+	   2 Input     16 Bit        Muxes := 6     
+	   2 Input     14 Bit        Muxes := 1     
+	  12 Input      8 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 20    
+	   3 Input      8 Bit        Muxes := 1     
+	   5 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	   5 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 5     
+	   2 Input      4 Bit        Muxes := 9     
+	   3 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 7     
+	   3 Input      3 Bit        Muxes := 4     
+	   5 Input      3 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 18    
+	   3 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 40    
+	   3 Input      1 Bit        Muxes := 7     
+	   4 Input      1 Bit        Muxes := 2     
+	  12 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module clk_division 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
+	   2 Input     31 Bit       Adders := 1     
++---Registers : 
+	               31 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   5 Input     31 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module Trigger_Generator 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 2     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 3     
+Module Gyro_Read_Data 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 4     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 8     
+	   3 Input      1 Bit        Muxes := 1     
+Module Gyro_Init 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	  12 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 1     
+Module Driver_Gyro 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 2     
+	   2 Input      2 Bit       Adders := 2     
++---Registers : 
+	               16 Bit    Registers := 7     
+	                8 Bit    Registers := 6     
+	                3 Bit    Registers := 3     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   3 Input     16 Bit        Muxes := 1     
+	   7 Input     16 Bit        Muxes := 3     
+	   2 Input     16 Bit        Muxes := 6     
+	   2 Input      8 Bit        Muxes := 3     
+	   3 Input      8 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   3 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 2     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 1     
+Module UART_Rx 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module UART_Tx 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+Module Driver_UART 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     28 Bit       Adders := 1     
++---Registers : 
+	               31 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module UART_Package 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               64 Bit    Registers := 2     
+	                8 Bit    Registers := 4     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 1     
+	   5 Input      8 Bit        Muxes := 1     
+	   5 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 5     
+	   2 Input      3 Bit        Muxes := 1     
+	   5 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module UART_Ctrl 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 7     
+	                8 Bit    Registers := 7     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 13    
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 5     
+	   4 Input      1 Bit        Muxes := 1     
+Module Driver_IIC 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     14 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               14 Bit    Registers := 1     
+	                8 Bit    Registers := 6     
+	                5 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 10    
++---Muxes : 
+	   2 Input     14 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 3     
+	  12 Input      8 Bit        Muxes := 1     
+	   3 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 4     
+	   2 Input      3 Bit        Muxes := 2     
+	   3 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 8     
+	   3 Input      1 Bit        Muxes := 2     
+	  12 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 20 (col length:20)
+BRAMs: 20 (col length: RAMB18 20 RAMB36 10)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-4471] merging register 'Gyro_Init_0/Trigger_Write/buffer_out_level_reg' into 'Gyro_Read_Data_0/Trigger_Write/buffer_out_level_reg' [C:/Users/ThinkPad/Desktop/FPGA_Demo_Project/Gyro_Demo/Gyro_Demo_Verilog/Gyro_Demo_Verilog.srcs/sources_1/new/Trigger_Generator.v:61]
+WARNING: [Synth 8-6014] Unused sequential element Gyro_Init_0/Trigger_Write/buffer_out_level_reg was removed.  [C:/Users/ThinkPad/Desktop/FPGA_Demo_Project/Gyro_Demo/Gyro_Demo_Verilog/Gyro_Demo_Verilog.srcs/sources_1/new/Trigger_Generator.v:61]
+WARNING: [Synth 8-3917] design Gyro_Demo_Verilog has port o_gpio_en[1] driven by constant 1
+WARNING: [Synth 8-3917] design Gyro_Demo_Verilog has port o_gpio_en[0] driven by constant 1
+WARNING: [Synth 8-3917] design Gyro_Demo_Verilog has port o_src_en driven by constant 0
+WARNING: [Synth 8-3331] design UART_Rx has unconnected port i_en
+INFO: [Synth 8-3886] merging instance 'UART0_Ctrl/UART_Package0/data_i_reg[63]' (FDC) to 'UART0_Ctrl/UART_Package0/end_i_reg[6]'
+INFO: [Synth 8-3886] merging instance 'UART0_Ctrl/UART_Package0/data_i_reg[62]' (FDC) to 'UART0_Ctrl/UART_Package0/end_i_reg[6]'
+INFO: [Synth 8-3886] merging instance 'UART0_Ctrl/UART_Package0/data_i_reg[55]' (FDC) to 'UART0_Ctrl/UART_Package0/end_i_reg[6]'
+INFO: [Synth 8-3886] merging instance 'UART0_Ctrl/UART_Package0/data_i_reg[61]' (FDC) to 'UART0_Ctrl/UART_Package0/end_i_reg[6]'
+INFO: [Synth 8-3886] merging instance 'UART0_Ctrl/UART_Package0/data_i_reg[54]' (FDC) to 'UART0_Ctrl/UART_Package0/end_i_reg[6]'
+INFO: [Synth 8-3886] merging instance 'UART0_Ctrl/UART_Package0/data_i_reg[60]' (FDC) to 'UART0_Ctrl/UART_Package0/end_i_reg[6]'
+INFO: [Synth 8-3886] merging instance 'UART0_Ctrl/UART_Package0/data_i_reg[53]' (FDC) to 'UART0_Ctrl/UART_Package0/end_i_reg[6]'
+INFO: [Synth 8-3886] merging instance 'UART0_Ctrl/UART_Package0/data_i_reg[59]' (FDC) to 'UART0_Ctrl/UART_Package0/end_i_reg[6]'
+INFO: [Synth 8-3886] merging instance 'UART0_Ctrl/UART_Package0/data_i_reg[52]' (FDC) to 'UART0_Ctrl/UART_Package0/end_i_reg[6]'
+INFO: [Synth 8-3886] merging instance 'UART0_Ctrl/UART_Package0/data_i_reg[58]' (FDC) to 'UART0_Ctrl/UART_Package0/end_i_reg[6]'
+INFO: [Synth 8-3886] merging instance 'UART0_Ctrl/UART_Package0/data_i_reg[51]' (FDC) to 'UART0_Ctrl/UART_Package0/end_i_reg[6]'
+INFO: [Synth 8-3886] merging instance 'UART0_Ctrl/UART_Package0/data_i_reg[57]' (FDC) to 'UART0_Ctrl/UART_Package0/end_i_reg[6]'
+INFO: [Synth 8-3886] merging instance 'UART0_Ctrl/UART_Package0/data_i_reg[50]' (FDC) to 'UART0_Ctrl/UART_Package0/end_i_reg[6]'
+INFO: [Synth 8-3886] merging instance 'UART0_Ctrl/UART_Package0/data_i_reg[56]' (FDC) to 'UART0_Ctrl/UART_Package0/end_i_reg[6]'
+INFO: [Synth 8-3886] merging instance 'UART0_Ctrl/UART_Package0/data_i_reg[49]' (FDC) to 'UART0_Ctrl/UART_Package0/end_i_reg[6]'
+INFO: [Synth 8-3886] merging instance 'UART0_Ctrl/UART_Package0/data_i_reg[48]' (FDC) to 'UART0_Ctrl/UART_Package0/end_i_reg[6]'
+INFO: [Synth 8-3886] merging instance 'UART0_Ctrl/UART_Package0/end_i_reg[7]' (FDC) to 'UART0_Ctrl/UART_Package0/end_i_reg[5]'
+INFO: [Synth 8-3886] merging instance 'UART0_Ctrl/UART_Package0/head_i_reg[7]' (FDC) to 'UART0_Ctrl/UART_Package0/end_i_reg[6]'
+INFO: [Synth 8-3886] merging instance 'Gyro_0/Gyro_Read_Data_0/read_clock/freq_num_reg[1]' (FDC) to 'Gyro_0/slave_addr_o_reg[5]'
+INFO: [Synth 8-3886] merging instance 'Gyro_0/Gyro_Read_Data_0/read_clock/freq_num_reg[2]' (FDC) to 'Gyro_0/slave_addr_o_reg[5]'
+INFO: [Synth 8-3886] merging instance 'Gyro_0/Gyro_Read_Data_0/read_clock/freq_num_reg[3]' (FDC) to 'Gyro_0/slave_addr_o_reg[5]'
+INFO: [Synth 8-3886] merging instance 'Gyro_0/Gyro_Read_Data_0/read_clock/freq_num_reg[4]' (FDC) to 'Gyro_0/slave_addr_o_reg[7]'
+INFO: [Synth 8-3886] merging instance 'Gyro_0/Gyro_Read_Data_0/read_clock/freq_num_reg[5]' (FDC) to 'Gyro_0/slave_addr_o_reg[5]'
+INFO: [Synth 8-3886] merging instance 'Gyro_0/Gyro_Read_Data_0/read_clock/freq_num_reg[6]' (FDC) to 'Gyro_0/slave_addr_o_reg[5]'
+INFO: [Synth 8-3886] merging instance 'Gyro_0/Gyro_Read_Data_0/read_clock/freq_num_reg[7]' (FDC) to 'Gyro_0/slave_addr_o_reg[5]'
+INFO: [Synth 8-3886] merging instance 'Gyro_0/Gyro_Read_Data_0/read_clock/freq_num_reg[8]' (FDC) to 'Gyro_0/slave_addr_o_reg[7]'
+INFO: [Synth 8-3886] merging instance 'Gyro_0/Gyro_Read_Data_0/read_clock/freq_num_reg[9]' (FDC) to 'Gyro_0/slave_addr_o_reg[7]'
+INFO: [Synth 8-3886] merging instance 'Gyro_0/Gyro_Read_Data_0/read_clock/freq_num_reg[10]' (FDC) to 'Gyro_0/slave_addr_o_reg[7]'
+INFO: [Synth 8-3886] merging instance 'Gyro_0/Gyro_Read_Data_0/read_clock/freq_num_reg[11]' (FDC) to 'Gyro_0/slave_addr_o_reg[5]'
+INFO: [Synth 8-3886] merging instance 'Gyro_0/Gyro_Read_Data_0/read_clock/freq_num_reg[12]' (FDC) to 'Gyro_0/slave_addr_o_reg[5]'
+INFO: [Synth 8-3886] merging instance 'Gyro_0/Gyro_Read_Data_0/read_clock/freq_num_reg[13]' (FDC) to 'Gyro_0/slave_addr_o_reg[7]'
+INFO: [Synth 8-3886] merging instance 'Gyro_0/Gyro_Read_Data_0/read_clock/freq_num_reg[14]' (FDC) to 'Gyro_0/slave_addr_o_reg[5]'
+INFO: [Synth 8-3886] merging instance 'Gyro_0/Gyro_Read_Data_0/read_clock/freq_num_reg[15]' (FDC) to 'Gyro_0/slave_addr_o_reg[5]'
+INFO: [Synth 8-3886] merging instance 'Gyro_0/Gyro_Read_Data_0/read_clock/freq_num_reg[16]' (FDC) to 'Gyro_0/slave_addr_o_reg[5]'
+INFO: [Synth 8-3886] merging instance 'Gyro_0/Gyro_Read_Data_0/read_clock/freq_num_reg[17]' (FDC) to 'Gyro_0/slave_addr_o_reg[5]'
+INFO: [Synth 8-3886] merging instance 'Gyro_0/Gyro_Read_Data_0/read_clock/freq_num_reg[18]' (FDC) to 'Gyro_0/slave_addr_o_reg[5]'
+INFO: [Synth 8-3886] merging instance 'Gyro_0/Gyro_Read_Data_0/read_clock/freq_num_reg[19]' (FDC) to 'Gyro_0/slave_addr_o_reg[5]'
+INFO: [Synth 8-3886] merging instance 'Gyro_0/Gyro_Read_Data_0/read_clock/freq_num_reg[20]' (FDC) to 'Gyro_0/slave_addr_o_reg[5]'
+INFO: [Synth 8-3886] merging instance 'Gyro_0/Gyro_Read_Data_0/read_clock/freq_num_reg[21]' (FDC) to 'Gyro_0/slave_addr_o_reg[5]'
+INFO: [Synth 8-3886] merging instance 'Gyro_0/Gyro_Read_Data_0/read_clock/freq_num_reg[22]' (FDC) to 'Gyro_0/slave_addr_o_reg[5]'
+INFO: [Synth 8-3886] merging instance 'Gyro_0/Gyro_Read_Data_0/read_clock/freq_num_reg[23]' (FDC) to 'Gyro_0/slave_addr_o_reg[5]'
+INFO: [Synth 8-3886] merging instance 'Gyro_0/Gyro_Read_Data_0/read_clock/freq_num_reg[24]' (FDC) to 'Gyro_0/slave_addr_o_reg[5]'
+INFO: [Synth 8-3886] merging instance 'Gyro_0/Gyro_Read_Data_0/read_clock/freq_num_reg[25]' (FDC) to 'Gyro_0/slave_addr_o_reg[5]'
+INFO: [Synth 8-3886] merging instance 'Gyro_0/Gyro_Read_Data_0/read_clock/freq_num_reg[26]' (FDC) to 'Gyro_0/slave_addr_o_reg[5]'
+INFO: [Synth 8-3886] merging instance 'Gyro_0/Gyro_Read_Data_0/read_clock/freq_num_reg[27]' (FDC) to 'Gyro_0/slave_addr_o_reg[5]'
+INFO: [Synth 8-3886] merging instance 'Gyro_0/Gyro_Read_Data_0/read_clock/freq_num_reg[28]' (FDC) to 'Gyro_0/slave_addr_o_reg[5]'
+INFO: [Synth 8-3886] merging instance 'Gyro_0/Gyro_Read_Data_0/read_clock/freq_num_reg[29]' (FDC) to 'Gyro_0/slave_addr_o_reg[5]'
+INFO: [Synth 8-3886] merging instance 'Gyro_0/Gyro_Read_Data_0/read_clock/freq_num_reg[30]' (FDC) to 'Gyro_0/slave_addr_o_reg[5]'
+INFO: [Synth 8-3886] merging instance 'Gyro_0/Gyro_Read_Data_0/read_clock/freq_num_reg[0]' (FDC) to 'Gyro_0/slave_addr_o_reg[5]'
+INFO: [Synth 8-3886] merging instance 'UART0_Ctrl/UART_Package0/end_i_reg[6]' (FDC) to 'UART0_Ctrl/UART_Package0/end_i_reg[4]'
+INFO: [Synth 8-3886] merging instance 'UART0_Ctrl/UART_Package0/head_i_reg[6]' (FDC) to 'UART0_Ctrl/UART_Package0/end_i_reg[5]'
+INFO: [Synth 8-3886] merging instance 'Gyro_0/Gyro_Read_Data_0/iic_busy_i_reg[0]' (FDC) to 'Gyro_0/Gyro_Init_0/iic_busy_i_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Gyro_0/Gyro_Read_Data_0/iic_busy_i_reg[1]' (FDC) to 'Gyro_0/Gyro_Init_0/iic_busy_i_reg[1]'
+INFO: [Synth 8-3886] merging instance 'UART0_Ctrl/UART_Package0/end_i_reg[5]' (FDC) to 'UART0_Ctrl/UART_Package0/end_i_reg[3]'
+INFO: [Synth 8-3886] merging instance 'UART0_Ctrl/UART_Package0/head_i_reg[5]' (FDC) to 'UART0_Ctrl/UART_Package0/end_i_reg[4]'
+INFO: [Synth 8-3886] merging instance 'UART0_Ctrl/UART_Package_CLK/freq_num_reg[1]' (FDC) to 'UART0_Ctrl/UART_Package0/end_i_reg[4]'
+INFO: [Synth 8-3886] merging instance 'UART0_Ctrl/UART_Package_CLK/freq_num_reg[2]' (FDC) to 'UART0_Ctrl/UART_Package0/end_i_reg[4]'
+INFO: [Synth 8-3886] merging instance 'UART0_Ctrl/UART_Package_CLK/freq_num_reg[3]' (FDC) to 'UART0_Ctrl/UART_Package0/end_i_reg[4]'
+INFO: [Synth 8-3886] merging instance 'UART0_Ctrl/UART_Package_CLK/freq_num_reg[4]' (FDC) to 'UART0_Ctrl/UART_Package0/end_i_reg[3]'
+INFO: [Synth 8-3886] merging instance 'UART0_Ctrl/UART_Package_CLK/freq_num_reg[5]' (FDC) to 'UART0_Ctrl/UART_Package0/end_i_reg[4]'
+INFO: [Synth 8-3886] merging instance 'UART0_Ctrl/UART_Package_CLK/freq_num_reg[6]' (FDC) to 'UART0_Ctrl/UART_Package0/end_i_reg[4]'
+INFO: [Synth 8-3886] merging instance 'UART0_Ctrl/UART_Package_CLK/freq_num_reg[7]' (FDC) to 'UART0_Ctrl/UART_Package0/end_i_reg[4]'
+INFO: [Synth 8-3886] merging instance 'UART0_Ctrl/UART_Package_CLK/freq_num_reg[8]' (FDC) to 'UART0_Ctrl/UART_Package0/end_i_reg[3]'
+INFO: [Synth 8-3886] merging instance 'UART0_Ctrl/UART_Package_CLK/freq_num_reg[9]' (FDC) to 'UART0_Ctrl/UART_Package0/end_i_reg[3]'
+INFO: [Synth 8-3886] merging instance 'UART0_Ctrl/UART_Package_CLK/freq_num_reg[10]' (FDC) to 'UART0_Ctrl/UART_Package0/end_i_reg[3]'
+INFO: [Synth 8-3886] merging instance 'UART0_Ctrl/UART_Package_CLK/freq_num_reg[11]' (FDC) to 'UART0_Ctrl/UART_Package0/end_i_reg[4]'
+INFO: [Synth 8-3886] merging instance 'UART0_Ctrl/UART_Package_CLK/freq_num_reg[12]' (FDC) to 'UART0_Ctrl/UART_Package0/end_i_reg[4]'
+INFO: [Synth 8-3886] merging instance 'UART0_Ctrl/UART_Package_CLK/freq_num_reg[13]' (FDC) to 'UART0_Ctrl/UART_Package0/end_i_reg[3]'
+INFO: [Synth 8-3886] merging instance 'UART0_Ctrl/UART_Package_CLK/freq_num_reg[14]' (FDC) to 'UART0_Ctrl/UART_Package0/end_i_reg[4]'
+INFO: [Synth 8-3886] merging instance 'UART0_Ctrl/UART_Package_CLK/freq_num_reg[15]' (FDC) to 'UART0_Ctrl/UART_Package0/end_i_reg[4]'
+INFO: [Synth 8-3886] merging instance 'UART0_Ctrl/UART_Package_CLK/freq_num_reg[16]' (FDC) to 'UART0_Ctrl/UART_Package0/end_i_reg[4]'
+INFO: [Synth 8-3886] merging instance 'UART0_Ctrl/UART_Package_CLK/freq_num_reg[17]' (FDC) to 'UART0_Ctrl/UART_Package0/end_i_reg[4]'
+INFO: [Synth 8-3886] merging instance 'UART0_Ctrl/UART_Package_CLK/freq_num_reg[18]' (FDC) to 'UART0_Ctrl/UART_Package0/end_i_reg[4]'
+INFO: [Synth 8-3886] merging instance 'UART0_Ctrl/UART_Package_CLK/freq_num_reg[19]' (FDC) to 'UART0_Ctrl/UART_Package0/end_i_reg[4]'
+INFO: [Synth 8-3886] merging instance 'UART0_Ctrl/UART_Package_CLK/freq_num_reg[20]' (FDC) to 'UART0_Ctrl/UART_Package0/end_i_reg[4]'
+INFO: [Synth 8-3886] merging instance 'UART0_Ctrl/UART_Package_CLK/freq_num_reg[21]' (FDC) to 'UART0_Ctrl/UART_Package0/end_i_reg[4]'
+INFO: [Synth 8-3886] merging instance 'UART0_Ctrl/UART_Package_CLK/freq_num_reg[22]' (FDC) to 'UART0_Ctrl/UART_Package0/end_i_reg[4]'
+INFO: [Synth 8-3886] merging instance 'UART0_Ctrl/UART_Package_CLK/freq_num_reg[23]' (FDC) to 'UART0_Ctrl/UART_Package0/end_i_reg[4]'
+INFO: [Synth 8-3886] merging instance 'UART0_Ctrl/UART_Package_CLK/freq_num_reg[24]' (FDC) to 'UART0_Ctrl/UART_Package0/end_i_reg[4]'
+INFO: [Synth 8-3886] merging instance 'UART0_Ctrl/UART_Package_CLK/freq_num_reg[25]' (FDC) to 'UART0_Ctrl/UART_Package0/end_i_reg[4]'
+INFO: [Synth 8-3886] merging instance 'UART0_Ctrl/UART_Package_CLK/freq_num_reg[26]' (FDC) to 'UART0_Ctrl/UART_Package0/end_i_reg[4]'
+INFO: [Synth 8-3886] merging instance 'UART0_Ctrl/UART_Package_CLK/freq_num_reg[27]' (FDC) to 'UART0_Ctrl/UART_Package0/end_i_reg[4]'
+INFO: [Synth 8-3886] merging instance 'UART0_Ctrl/UART_Package_CLK/freq_num_reg[28]' (FDC) to 'UART0_Ctrl/UART_Package0/end_i_reg[4]'
+INFO: [Synth 8-3886] merging instance 'UART0_Ctrl/UART_Package_CLK/freq_num_reg[29]' (FDC) to 'UART0_Ctrl/UART_Package0/end_i_reg[4]'
+INFO: [Synth 8-3886] merging instance 'UART0_Ctrl/UART_Package_CLK/freq_num_reg[30]' (FDC) to 'UART0_Ctrl/UART_Package0/end_i_reg[4]'
+INFO: [Synth 8-3886] merging instance 'UART0_Ctrl/UART_Package_CLK/freq_num_reg[0]' (FDC) to 'UART0_Ctrl/UART_Package0/end_i_reg[4]'
+INFO: [Synth 8-3886] merging instance 'UART0_Ctrl/UART_Package0/end_i_reg[4]' (FDC) to 'UART0_Ctrl/UART_Package0/end_i_reg[2]'
+INFO: [Synth 8-3886] merging instance 'UART0_Ctrl/UART_Package0/head_i_reg[4]' (FDC) to 'UART0_Ctrl/UART_Package0/end_i_reg[3]'
+INFO: [Synth 8-3886] merging instance 'UART0_Ctrl/UART_Package0/data_num_i_reg[0]' (FDC) to 'UART0_Ctrl/UART_Package0/end_i_reg[2]'
+INFO: [Synth 8-3886] merging instance 'UART0_Ctrl/UART_Package0/data_num_i_reg[1]' (FDC) to 'UART0_Ctrl/UART_Package0/end_i_reg[3]'
+INFO: [Synth 8-3886] merging instance 'UART0_Ctrl/UART_Package0/data_num_i_reg[2]' (FDC) to 'UART0_Ctrl/UART_Package0/end_i_reg[3]'
+INFO: [Synth 8-3886] merging instance 'UART0_Ctrl/UART_Package0/end_i_reg[3]' (FDC) to 'UART0_Ctrl/UART_Package0/end_i_reg[1]'
+INFO: [Synth 8-3886] merging instance 'UART0_Ctrl/UART_Package0/head_i_reg[3]' (FDC) to 'UART0_Ctrl/UART_Package0/end_i_reg[2]'
+INFO: [Synth 8-3886] merging instance 'Gyro_0/read_addr_reg[7]' (FDC) to 'Gyro_0/slave_addr_o_reg[5]'
+INFO: [Synth 8-3886] merging instance 'Gyro_0/read_addr_reg[5]' (FDC) to 'Gyro_0/slave_addr_o_reg[7]'
+INFO: [Synth 8-3886] merging instance 'Gyro_0/read_addr_reg[4]' (FDC) to 'Gyro_0/slave_addr_o_reg[5]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Gyro_0/\Gyro_Read_Data_0/Trigger_Write/buffer_out_level_reg )
+INFO: [Synth 8-3886] merging instance 'UART0_Ctrl/UART_Package0/end_i_reg[2]' (FDC) to 'UART0_Ctrl/UART_Package0/end_i_reg[0]'
+INFO: [Synth 8-3886] merging instance 'UART0_Ctrl/UART_Package0/head_i_reg[2]' (FDC) to 'UART0_Ctrl/UART_Package0/end_i_reg[1]'
+INFO: [Synth 8-3886] merging instance 'Gyro_0/Gyro_Read_Data_0/read_addr_i_reg[7]' (FDC) to 'Gyro_0/Gyro_Read_Data_0/read_addr_i_reg[4]'
+INFO: [Synth 8-3886] merging instance 'Gyro_0/data_mode_i_reg[2]' (FDC) to 'Gyro_0/slave_addr_o_reg[7]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Gyro_0/\Gyro_Init_0/reg_addr_l_o_reg[5] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (UART0_Ctrl/\UART0/baudrate_i_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (UART0_Ctrl/\UART_Package0/end_i_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Gyro_0/reg_mode_o_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (UART0_Ctrl/\UART0/clk_mode_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (IIC_0/\state_current_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (UART0_Ctrl/\UART_Package0/end_i_reg[0] )
+WARNING: [Synth 8-3332] Sequential element (Gyro_Read_Data_0/read_clock/flag_reg) is unused and will be removed from module Driver_Gyro.
+WARNING: [Synth 8-3332] Sequential element (Gyro_Read_Data_0/Trigger_Write/buffer_out_level_reg) is unused and will be removed from module Driver_Gyro.
+WARNING: [Synth 8-3332] Sequential element (Gyro_Read_Data_0/read_addr_i_reg[4]) is unused and will be removed from module Driver_Gyro.
+WARNING: [Synth 8-3332] Sequential element (Gyro_Read_Data_0/reg_addr_l_o_reg[4]) is unused and will be removed from module Driver_Gyro.
+WARNING: [Synth 8-3332] Sequential element (reg_addr_l_o_reg[7]) is unused and will be removed from module Driver_Gyro.
+WARNING: [Synth 8-3332] Sequential element (data_w_o_reg[1]) is unused and will be removed from module Driver_Gyro.
+WARNING: [Synth 8-3332] Sequential element (Gyro_Init_0/reg_addr_l_o_reg[5]) is unused and will be removed from module Driver_Gyro.
+WARNING: [Synth 8-3332] Sequential element (reg_mode_o_reg) is unused and will be removed from module Driver_Gyro.
+WARNING: [Synth 8-3332] Sequential element (UART0/UART_Rx0/data_o_reg[7]) is unused and will be removed from module UART_Ctrl.
+WARNING: [Synth 8-3332] Sequential element (UART0/UART_Rx0/data_o_reg[6]) is unused and will be removed from module UART_Ctrl.
+WARNING: [Synth 8-3332] Sequential element (UART0/UART_Rx0/data_o_reg[5]) is unused and will be removed from module UART_Ctrl.
+WARNING: [Synth 8-3332] Sequential element (UART0/UART_Rx0/data_o_reg[4]) is unused and will be removed from module UART_Ctrl.
+WARNING: [Synth 8-3332] Sequential element (UART0/UART_Rx0/data_o_reg[3]) is unused and will be removed from module UART_Ctrl.
+WARNING: [Synth 8-3332] Sequential element (UART0/UART_Rx0/data_o_reg[2]) is unused and will be removed from module UART_Ctrl.
+WARNING: [Synth 8-3332] Sequential element (UART0/UART_Rx0/data_o_reg[1]) is unused and will be removed from module UART_Ctrl.
+WARNING: [Synth 8-3332] Sequential element (UART0/UART_Rx0/data_o_reg[0]) is unused and will be removed from module UART_Ctrl.
+WARNING: [Synth 8-3332] Sequential element (UART0/baudrate_i_reg[13]) is unused and will be removed from module UART_Ctrl.
+WARNING: [Synth 8-3332] Sequential element (UART0/clk_mode_reg[30]) is unused and will be removed from module UART_Ctrl.
+WARNING: [Synth 8-3332] Sequential element (UART0/clk_mode_reg[27]) is unused and will be removed from module UART_Ctrl.
+WARNING: [Synth 8-3332] Sequential element (UART0/clk_mode_reg[26]) is unused and will be removed from module UART_Ctrl.
+WARNING: [Synth 8-3332] Sequential element (UART0/clk_mode_reg[25]) is unused and will be removed from module UART_Ctrl.
+WARNING: [Synth 8-3332] Sequential element (UART0/clk_mode_reg[24]) is unused and will be removed from module UART_Ctrl.
+WARNING: [Synth 8-3332] Sequential element (UART0/clk_mode_reg[23]) is unused and will be removed from module UART_Ctrl.
+WARNING: [Synth 8-3332] Sequential element (UART0/clk_mode_reg[22]) is unused and will be removed from module UART_Ctrl.
+WARNING: [Synth 8-3332] Sequential element (UART0/clk_mode_reg[21]) is unused and will be removed from module UART_Ctrl.
+WARNING: [Synth 8-3332] Sequential element (UART0/clk_mode_reg[20]) is unused and will be removed from module UART_Ctrl.
+WARNING: [Synth 8-3332] Sequential element (UART0/clk_mode_reg[19]) is unused and will be removed from module UART_Ctrl.
+WARNING: [Synth 8-3332] Sequential element (UART0/clk_mode_reg[18]) is unused and will be removed from module UART_Ctrl.
+WARNING: [Synth 8-3332] Sequential element (UART_Package_CLK/flag_reg) is unused and will be removed from module UART_Ctrl.
+WARNING: [Synth 8-3332] Sequential element (UART_Package0/tx_wr_data_reg[63]) is unused and will be removed from module UART_Ctrl.
+WARNING: [Synth 8-3332] Sequential element (UART_Package0/tx_wr_data_reg[62]) is unused and will be removed from module UART_Ctrl.
+WARNING: [Synth 8-3332] Sequential element (UART_Package0/tx_wr_data_reg[61]) is unused and will be removed from module UART_Ctrl.
+WARNING: [Synth 8-3332] Sequential element (UART_Package0/tx_wr_data_reg[60]) is unused and will be removed from module UART_Ctrl.
+WARNING: [Synth 8-3332] Sequential element (UART_Package0/tx_wr_data_reg[59]) is unused and will be removed from module UART_Ctrl.
+WARNING: [Synth 8-3332] Sequential element (UART_Package0/tx_wr_data_reg[58]) is unused and will be removed from module UART_Ctrl.
+WARNING: [Synth 8-3332] Sequential element (UART_Package0/tx_wr_data_reg[57]) is unused and will be removed from module UART_Ctrl.
+WARNING: [Synth 8-3332] Sequential element (UART_Package0/tx_wr_data_reg[56]) is unused and will be removed from module UART_Ctrl.
+WARNING: [Synth 8-3332] Sequential element (UART_Package0/tx_wr_data_reg[55]) is unused and will be removed from module UART_Ctrl.
+WARNING: [Synth 8-3332] Sequential element (UART_Package0/tx_wr_data_reg[54]) is unused and will be removed from module UART_Ctrl.
+WARNING: [Synth 8-3332] Sequential element (UART_Package0/tx_wr_data_reg[53]) is unused and will be removed from module UART_Ctrl.
+WARNING: [Synth 8-3332] Sequential element (UART_Package0/tx_wr_data_reg[52]) is unused and will be removed from module UART_Ctrl.
+WARNING: [Synth 8-3332] Sequential element (UART_Package0/tx_wr_data_reg[51]) is unused and will be removed from module UART_Ctrl.
+WARNING: [Synth 8-3332] Sequential element (UART_Package0/tx_wr_data_reg[50]) is unused and will be removed from module UART_Ctrl.
+WARNING: [Synth 8-3332] Sequential element (UART_Package0/tx_wr_data_reg[49]) is unused and will be removed from module UART_Ctrl.
+WARNING: [Synth 8-3332] Sequential element (UART_Package0/tx_wr_data_reg[48]) is unused and will be removed from module UART_Ctrl.
+WARNING: [Synth 8-3332] Sequential element (UART_Package0/end_i_reg[0]) is unused and will be removed from module UART_Ctrl.
+WARNING: [Synth 8-3332] Sequential element (state_current_reg[4]) is unused and will be removed from module Driver_IIC.
+WARNING: [Synth 8-3332] Sequential element (buf_iic_mode_reg) is unused and will be removed from module Driver_IIC.
+WARNING: [Synth 8-3332] Sequential element (buf_slave_addr_w_reg[0]) is unused and will be removed from module Driver_IIC.
+WARNING: [Synth 8-3332] Sequential element (buf_reg_addr_h_reg[7]) is unused and will be removed from module Driver_IIC.
+WARNING: [Synth 8-3332] Sequential element (buf_reg_addr_h_reg[6]) is unused and will be removed from module Driver_IIC.
+WARNING: [Synth 8-3332] Sequential element (buf_reg_addr_h_reg[5]) is unused and will be removed from module Driver_IIC.
+WARNING: [Synth 8-3332] Sequential element (buf_reg_addr_h_reg[4]) is unused and will be removed from module Driver_IIC.
+WARNING: [Synth 8-3332] Sequential element (buf_reg_addr_h_reg[3]) is unused and will be removed from module Driver_IIC.
+WARNING: [Synth 8-3332] Sequential element (buf_reg_addr_h_reg[2]) is unused and will be removed from module Driver_IIC.
+WARNING: [Synth 8-3332] Sequential element (buf_reg_addr_h_reg[1]) is unused and will be removed from module Driver_IIC.
+WARNING: [Synth 8-3332] Sequential element (buf_reg_addr_h_reg[0]) is unused and will be removed from module Driver_IIC.
+WARNING: [Synth 8-3332] Sequential element (buf_reg_addr_l_reg[7]) is unused and will be removed from module Driver_IIC.
+WARNING: [Synth 8-3332] Sequential element (buf_data_reg[1]) is unused and will be removed from module Driver_IIC.
+WARNING: [Synth 8-3332] Sequential element (buf_slave_addr_w_reg[5]) is unused and will be removed from module Driver_IIC.
+WARNING: [Synth 8-3332] Sequential element (buf_slave_addr_w_reg[3]) is unused and will be removed from module Driver_IIC.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (UART0_Ctrl/\UART0/clk_mode_reg[17] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (UART0_Ctrl/\UART0/clk_mode_reg[0] )
+WARNING: [Synth 8-3332] Sequential element (UART0/UART_CLK/freq_num_reg[17]) is unused and will be removed from module UART_Ctrl.
+WARNING: [Synth 8-3332] Sequential element (UART0/set_baudrate_i_reg[1]) is unused and will be removed from module UART_Ctrl.
+WARNING: [Synth 8-3332] Sequential element (UART0/flg_set_baudrate_reg) is unused and will be removed from module UART_Ctrl.
+WARNING: [Synth 8-3332] Sequential element (UART0/clk_mode_reg[17]) is unused and will be removed from module UART_Ctrl.
+WARNING: [Synth 8-3332] Sequential element (UART0/clk_mode_reg[0]) is unused and will be removed from module UART_Ctrl.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (UART0_Ctrl/i_9/\num_cnt_reg[7] )
+WARNING: [Synth 8-3332] Sequential element (UART_Package0/num_i_reg[7]) is unused and will be removed from module UART_Ctrl.
+WARNING: [Synth 8-3332] Sequential element (UART_Package0/num_i_reg[6]) is unused and will be removed from module UART_Ctrl.
+WARNING: [Synth 8-3332] Sequential element (UART_Package0/num_i_reg[5]) is unused and will be removed from module UART_Ctrl.
+WARNING: [Synth 8-3332] Sequential element (UART_Package0/num_i_reg[4]) is unused and will be removed from module UART_Ctrl.
+WARNING: [Synth 8-3332] Sequential element (UART_Package0/num_i_reg[3]) is unused and will be removed from module UART_Ctrl.
+WARNING: [Synth 8-3332] Sequential element (UART_Package0/num_i_reg[2]) is unused and will be removed from module UART_Ctrl.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 811.070 ; gain = 466.895
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'System_Clock/clk_out1' to pin 'System_Clock/bbstub_clk_out1/O'
+INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 811.070 ; gain = 466.895
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 823.082 ; gain = 478.906
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (Gyro_0/magy_data_o_reg[15]) is unused and will be removed from module Gyro_Demo_Verilog.
+WARNING: [Synth 8-3332] Sequential element (Gyro_0/magy_data_o_reg[14]) is unused and will be removed from module Gyro_Demo_Verilog.
+WARNING: [Synth 8-3332] Sequential element (Gyro_0/magy_data_o_reg[13]) is unused and will be removed from module Gyro_Demo_Verilog.
+WARNING: [Synth 8-3332] Sequential element (Gyro_0/magy_data_o_reg[12]) is unused and will be removed from module Gyro_Demo_Verilog.
+WARNING: [Synth 8-3332] Sequential element (Gyro_0/magy_data_o_reg[11]) is unused and will be removed from module Gyro_Demo_Verilog.
+WARNING: [Synth 8-3332] Sequential element (Gyro_0/magy_data_o_reg[10]) is unused and will be removed from module Gyro_Demo_Verilog.
+WARNING: [Synth 8-3332] Sequential element (Gyro_0/magy_data_o_reg[9]) is unused and will be removed from module Gyro_Demo_Verilog.
+WARNING: [Synth 8-3332] Sequential element (Gyro_0/magy_data_o_reg[8]) is unused and will be removed from module Gyro_Demo_Verilog.
+WARNING: [Synth 8-3332] Sequential element (Gyro_0/magy_data_o_reg[7]) is unused and will be removed from module Gyro_Demo_Verilog.
+WARNING: [Synth 8-3332] Sequential element (Gyro_0/magy_data_o_reg[6]) is unused and will be removed from module Gyro_Demo_Verilog.
+WARNING: [Synth 8-3332] Sequential element (Gyro_0/magy_data_o_reg[5]) is unused and will be removed from module Gyro_Demo_Verilog.
+WARNING: [Synth 8-3332] Sequential element (Gyro_0/magy_data_o_reg[4]) is unused and will be removed from module Gyro_Demo_Verilog.
+WARNING: [Synth 8-3332] Sequential element (Gyro_0/magy_data_o_reg[3]) is unused and will be removed from module Gyro_Demo_Verilog.
+WARNING: [Synth 8-3332] Sequential element (Gyro_0/magy_data_o_reg[2]) is unused and will be removed from module Gyro_Demo_Verilog.
+WARNING: [Synth 8-3332] Sequential element (Gyro_0/magy_data_o_reg[1]) is unused and will be removed from module Gyro_Demo_Verilog.
+WARNING: [Synth 8-3332] Sequential element (Gyro_0/magy_data_o_reg[0]) is unused and will be removed from module Gyro_Demo_Verilog.
+WARNING: [Synth 8-3332] Sequential element (Gyro_0/magz_data_o_reg[15]) is unused and will be removed from module Gyro_Demo_Verilog.
+WARNING: [Synth 8-3332] Sequential element (Gyro_0/magz_data_o_reg[14]) is unused and will be removed from module Gyro_Demo_Verilog.
+WARNING: [Synth 8-3332] Sequential element (Gyro_0/magz_data_o_reg[13]) is unused and will be removed from module Gyro_Demo_Verilog.
+WARNING: [Synth 8-3332] Sequential element (Gyro_0/magz_data_o_reg[12]) is unused and will be removed from module Gyro_Demo_Verilog.
+WARNING: [Synth 8-3332] Sequential element (Gyro_0/magz_data_o_reg[11]) is unused and will be removed from module Gyro_Demo_Verilog.
+WARNING: [Synth 8-3332] Sequential element (Gyro_0/magz_data_o_reg[10]) is unused and will be removed from module Gyro_Demo_Verilog.
+WARNING: [Synth 8-3332] Sequential element (Gyro_0/magz_data_o_reg[9]) is unused and will be removed from module Gyro_Demo_Verilog.
+WARNING: [Synth 8-3332] Sequential element (Gyro_0/magz_data_o_reg[8]) is unused and will be removed from module Gyro_Demo_Verilog.
+WARNING: [Synth 8-3332] Sequential element (Gyro_0/magz_data_o_reg[7]) is unused and will be removed from module Gyro_Demo_Verilog.
+WARNING: [Synth 8-3332] Sequential element (Gyro_0/magz_data_o_reg[6]) is unused and will be removed from module Gyro_Demo_Verilog.
+WARNING: [Synth 8-3332] Sequential element (Gyro_0/magz_data_o_reg[5]) is unused and will be removed from module Gyro_Demo_Verilog.
+WARNING: [Synth 8-3332] Sequential element (Gyro_0/magz_data_o_reg[4]) is unused and will be removed from module Gyro_Demo_Verilog.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 827.258 ; gain = 483.082
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 827.258 ; gain = 483.082
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 827.258 ; gain = 483.082
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 827.258 ; gain = 483.082
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 827.258 ; gain = 483.082
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 827.258 ; gain = 483.082
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 827.258 ; gain = 483.082
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |clk_wiz_0     |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |clk_wiz_0 |     1|
+|2     |CARRY4    |    66|
+|3     |LUT1      |    14|
+|4     |LUT2      |   141|
+|5     |LUT3      |    94|
+|6     |LUT4      |   109|
+|7     |LUT5      |   157|
+|8     |LUT6      |    88|
+|9     |MUXF7     |     2|
+|10    |FDCE      |   562|
+|11    |FDPE      |     6|
+|12    |FDRE      |   101|
+|13    |IBUF      |     3|
+|14    |IOBUF     |     1|
+|15    |OBUF      |     5|
++------+----------+------+
+
+Report Instance Areas: 
++------+---------------------+--------------------+------+
+|      |Instance             |Module              |Cells |
++------+---------------------+--------------------+------+
+|1     |top                  |                    |  1350|
+|2     |  Gyro_0             |Driver_Gyro         |   475|
+|3     |    Gyro_Init_0      |Gyro_Init           |    84|
+|4     |      Trigger_Write  |Trigger_Generator_2 |    18|
+|5     |    Gyro_Read_Data_0 |Gyro_Read_Data      |   158|
+|6     |      Trigger_Write  |Trigger_Generator   |    19|
+|7     |      read_clock     |clk_division_1      |    92|
+|8     |  IIC_0              |Driver_IIC          |   155|
+|9     |  UART0_Ctrl         |UART_Ctrl           |   710|
+|10    |    UART0            |Driver_UART         |   203|
+|11    |      UART_CLK       |clk_division_0      |   153|
+|12    |      UART_Rx0       |UART_Rx             |    12|
+|13    |      UART_Tx0       |UART_Tx             |    38|
+|14    |    UART_Package0    |UART_Package        |   195|
+|15    |    UART_Package_CLK |clk_division        |   121|
++------+---------------------+--------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 827.258 ; gain = 483.082
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 109 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 827.258 ; gain = 171.383
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 827.258 ; gain = 483.082
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 72 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 1 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+201 Infos, 112 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 827.258 ; gain = 494.930
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/ThinkPad/Desktop/FPGA_Demo_Project/Gyro_Demo/Gyro_Demo_Verilog/Gyro_Demo_Verilog.runs/synth_1/Gyro_Demo_Verilog.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file Gyro_Demo_Verilog_utilization_synth.rpt -pb Gyro_Demo_Verilog_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.042 . Memory (MB): peak = 827.258 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Jul 20 09:53:26 2020...
