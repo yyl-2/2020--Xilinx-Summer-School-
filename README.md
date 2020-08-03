@@ -8,9 +8,8 @@
 * 本项目基于SEA-S7开发平台，利用板载陀螺仪读取姿态数据，通过ESP32的WIFI联网，由ESP32上传到AWS的云端服务器节点上，在服务器端进行显示进行摇摇乐的实现，呈现直观的计步小程序。
 
 ### 工具版本
-* 【Vivado2018.3】（https://china.xilinx.com) 
-
-  【Arduino 1.8.13】（https://www.arduino.cc/en/Main/Software）
+* [Vivado 2018.3](https://china.xilinx.com)
+* [Arduino 1.8.13](https://www.arduino.cc/en/Main/Software)
 
 ### 板卡型号 
 * Espressif ESP32-D0WDQ6
