@@ -40,7 +40,7 @@
 * Esp32连接**AWS IoT**，使用MQTT订阅主题观察数据情况，将板载陀螺仪数据上传至IoT云端。
 * 利用IoT云端 Web API，从AWS平台获取数据并处理，用于呈现直观的计步器小程序。
 ### 项目框图
-* [block.png](https://github.com/yyl-2/2020--Xilinx-Summer-School-/raw/master/Images/block.png)
+* ![](https://github.com/yyl-2/2020--Xilinx-Summer-School-/blob/master/Images/block.png)
 
 ### 设计特色
 * 摇摇乐的设计类似手机的计步器，大多数的计步器使用加速度数据，基于阈值来检测步伐，检测技术，不论是硬件还是软件，都不能满足高精度的定位系统，尤其是在缓慢步行的情况下。低速行走时，重力加速度几
